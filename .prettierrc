@@ -10,16 +10,6 @@
   "trailingComma": "all",
   "arrowParens": "always",
   "bracketSameLine": false,
-  "importOrder": [
-    ".css$",
-    ".styles",
-    "^react",
-    "next",
-    "^@",
-    "^[../]",
-    "^[./]",
-    "<THIRD_PARTY_MODULES>"
-  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
