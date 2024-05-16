@@ -1,5 +1,5 @@
-import { DividerProps } from './type';
 import * as S from './style';
+import { DividerProps } from './type';
 
 const Divider = ({ direction = 'horizontal', ...rest }: DividerProps) => {
   return (

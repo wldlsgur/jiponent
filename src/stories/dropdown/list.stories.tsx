@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Dropdown } from '../../libs';
 import { action } from '@storybook/addon-actions';
+import { Dropdown } from '../../libs';
 
 /**
  * ## DropdownList 컴포넌트
@@ -40,17 +40,15 @@ type Story = StoryObj<typeof meta>;
 
 export const FruitDropdown: Story = {
   decorators: [
-    (DropdownList, { args }) => {
-      return (
-        <Dropdown
-          defaultValue='select 초기 선택 값'
-          onChange={action('value')}
-        >
-          <Dropdown.Select />
-          <DropdownList args={args} />
-        </Dropdown>
-      );
-    },
+    (DropdownList, { args }) => (
+      <Dropdown
+        defaultValue='select 초기 선택 값'
+        onChange={action('value')}
+      >
+        <Dropdown.Select />
+        <DropdownList args={args} />
+      </Dropdown>
+    ),
   ],
   args: { list: ['apple', 'banana', 'orange'] },
 };

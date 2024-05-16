@@ -1,7 +1,4 @@
-'use client';
-
 import { useEffect, useRef } from 'react';
-
 import { CallbackType } from './type';
 
 const events: ['mousedown', 'touchstart'] = ['mousedown', 'touchstart'];

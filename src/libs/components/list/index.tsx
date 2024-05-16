@@ -1,5 +1,5 @@
-import { Props } from './type';
 import * as S from './style';
+import { Props } from './type';
 
 const List = <T,>({ data, children, ...rest }: Props<T>) => {
   return (

@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import { useDropdownContext } from '../context/dropdownContext';
-import { Props } from './type';
 import * as S from './style';
+import { Props } from './type';
 
 const DropdownList = ({ list = [], ...rest }: Props) => {
   const { isToggle, handleValueChange } = useDropdownContext();
@@ -12,17 +12,15 @@ const DropdownList = ({ list = [], ...rest }: Props) => {
       $visible={isToggle}
       {...listRest}
     >
-      {list.map((value) => {
-        return (
-          <S.DropdownItem
-            key={value}
-            onClick={(event: MouseEvent<HTMLLIElement>) => handleValueChange(event, value)}
-            {...itemRest}
-          >
-            {value}
-          </S.DropdownItem>
-        );
-      })}
+      {list.map((value) => (
+        <S.DropdownItem
+          key={value}
+          onClick={(event: MouseEvent<HTMLLIElement>) => handleValueChange(event, value)}
+          {...itemRest}
+        >
+          {value}
+        </S.DropdownItem>
+      ))}
     </S.DropdownList>
   );
 };

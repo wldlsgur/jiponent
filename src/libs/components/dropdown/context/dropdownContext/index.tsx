@@ -9,9 +9,9 @@ import {
   useRef,
   useState,
 } from 'react';
-import { useToggle, useClickAway } from '@/libs/index';
-import { DropdownContextProps, DropdownContextProviderProps } from './type';
 import * as S from './style';
+import { DropdownContextProps, DropdownContextProviderProps } from './type';
+import { useToggle, useClickAway } from '@/libs';
 
 export const DropdownContext = createContext<DropdownContextProps>({
   selectedValue: '',

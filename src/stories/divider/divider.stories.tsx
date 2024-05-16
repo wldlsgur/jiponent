@@ -45,13 +45,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Horizontal: Story = {
   decorators: [
-    (DividerComponent, { args }) => {
-      return (
-        <div style={{ width: '40rem' }}>
-          <DividerComponent args={args} />
-        </div>
-      );
-    },
+    (DividerComponent, { args }) => (
+      <div style={{ width: '40rem' }}>
+        <DividerComponent args={args} />
+      </div>
+    ),
   ],
   args: {
     direction: 'horizontal',

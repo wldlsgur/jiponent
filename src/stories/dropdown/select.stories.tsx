@@ -32,16 +32,14 @@ type Story = StoryObj<typeof meta>;
 
 export const BaseDropdownSelect: Story = {
   decorators: [
-    (DropdownSelect, { args }) => {
-      return (
-        <Dropdown
-          defaultValue='select 초기 선택 값'
-          onChange={() => {}}
-        >
-          <DropdownSelect args={args} />
-        </Dropdown>
-      );
-    },
+    (DropdownSelect, { args }) => (
+      <Dropdown
+        defaultValue='select 초기 선택 값'
+        onChange={() => {}}
+      >
+        <DropdownSelect args={args} />
+      </Dropdown>
+    ),
   ],
   args: {},
 };
