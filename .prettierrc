@@ -9,7 +9,7 @@
   "jsxSingleQuote": true,
   "trailingComma": "all",
   "arrowParens": "always",
-  "bracketSameLine": true,
+  "bracketSameLine": false,
   "importOrder": [
     ".css$",
     ".styles",
