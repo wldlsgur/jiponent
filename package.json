@@ -1,14 +1,20 @@
 {
   "name": "jiponent",
   "description": "react components",
+  "keywords": [
+    "react",
+    "components"
+  ],
   "private": false,
-  "version": "0.0.2",
+  "license": "MIT",
+  "version": "0.0.11",
   "type": "module",
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs"
     }
@@ -23,8 +29,7 @@
   "author": "InHyeok Ji",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run tailwind",
-    "tailwind": "npx tailwindcss -o ./dist/index.css --minify",
+    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -32,7 +37,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.5",
@@ -51,6 +57,7 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "chromatic": "^11.3.5",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",

@@ -1,7 +1,7 @@
 import { HTMLAttributes } from 'react';
 
-export type Divider = 'horizontal' | 'vertical';
+export type TDivider = 'horizontal' | 'vertical';
 
 export interface DividerProps extends HTMLAttributes<HTMLHRElement> {
-  direction?: Divider;
+  direction?: TDivider;
 }
