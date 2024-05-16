@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.tsx'),
+      entry: path.resolve(__dirname, 'src/libs/index.tsx'),
       name: 'index',
       fileName: 'index',
     },
@@ -25,6 +25,7 @@ export default defineConfig({
     commonjsOptions: {
       esmExternals: ['react'],
     },
+    ssr: true,
   },
   plugins: [dts()],
 });
