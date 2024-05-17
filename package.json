@@ -3,20 +3,21 @@
   "description": "react components",
   "keywords": [
     "react",
-    "components"
+    "components",
+    "customHook"
   ],
   "private": false,
   "license": "MIT",
-  "version": "0.0.11",
+  "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.umd.cjs",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.umd.cjs"
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
@@ -30,10 +31,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "format": "prettier --cache --write .",
+    "lint": "eslint --cache ."
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -69,10 +73,18 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "storybook": "^8.0.10",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.9.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --cache --write",
+      "eslint --cache --fix --max-warnings=0"
+    ]
   }
 }
