@@ -1,5 +1,5 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
+import React from 'react';
 import { List } from '../../libs';
 
 /**
@@ -47,27 +47,33 @@ type Story = StoryObj<typeof meta>;
 export const NumberList: Story = {
   args: {
     data: ['one', 'two', 'three'],
-    children: (value: string, index: number) => (
-      <li
-        key={index}
-        style={{ listStyle: 'none' }}
-      >
-        {value}
-      </li>
-    ),
+    children: (data: unknown, index: number): React.ReactNode => {
+      const value = data as string;
+      return (
+        <li
+          key={index}
+          style={{ listStyle: 'none' }}
+        >
+          {value}
+        </li>
+      );
+    },
   },
 };
 
 export const FruitList: Story = {
   args: {
     data: ['apple', 'banana', 'orange'],
-    children: (value: string, index: number) => (
-      <li
-        key={index}
-        style={{ listStyle: 'none' }}
-      >
-        {value}
-      </li>
-    ),
+    children: (data: unknown, index: number): React.ReactNode => {
+      const value = data as string;
+      return (
+        <li
+          key={index}
+          style={{ listStyle: 'none' }}
+        >
+          {value}
+        </li>
+      );
+    },
   },
 };
