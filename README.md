@@ -76,3 +76,59 @@ return <div ref={ref}>내용</div>;
 #### 반환 값
 
 - ref: useClickAway 훅은 클릭 이벤트 감지를 위해 사용될 요소에 연결할 수 있는 React 참조(React.RefObject)를 반환합니다. 이 참조는 훅을 사용할 컴포넌트 내에서 요소에 할당되어야 합니다.
+
+### useLocalStorage
+
+useLocalStorage는 로컬 스토리지(Local Storage) 상태 관리를 위한 커스텀 훅입니다.
+
+#### 사용법
+
+이 훅은 키와 기본값을 인자로 받아 로컬 스토리지에 저장된 값을 관리합니다. 또한 오류가 발생했을 때 호출될 콜백 함수를 설정할 수 있습니다.
+
+```jsx
+const { value, setItem, removeItem } = useLocalStorage({
+  key: 'myKey',
+  defaultValue: 'defaultValue',
+  onError: (error) => console.error(error),
+});
+```
+
+#### 매개변수
+
+- key (string): 로컬 스토리지에서 값을 저장하거나 가져올 때 사용할 키입니다.
+- defaultValue (T): 로컬 스토리지에 값이 없을 때 사용할 기본값입니다.
+- onError ((error: Error) => void): 오류가 발생했을 때 호출될 콜백 함수입니다.
+
+#### 반환 값
+
+- value (T): 현재 로컬 스토리지의 값을 나타냅니다.
+- setItem ((newValue: T) => void): 로컬 스토리지의 값을 설정하는 함수입니다.
+- removeItem (() => void): 로컬 스토리지의 값을 제거하고 기본값으로 초기화하는 함수입니다.
+
+### useSessionStorage
+
+useSessionStorage는 세션 스토리지(Session Storage) 상태 관리를 위한 커스텀 훅입니다.
+
+#### 사용법
+
+이 훅은 키와 기본값을 인자로 받아 세션 스토리지에 저장된 값을 관리합니다. 또한 오류가 발생했을 때 호출될 콜백 함수를 설정할 수 있습니다.
+
+```jsx
+const { value, setItem, removeItem } = useSessionStorage({
+  key: 'myKey',
+  defaultValue: 'defaultValue',
+  onError: (error) => console.error(error),
+});
+```
+
+#### 매개변수
+
+- key (string): 세션 스토리지에서 값을 저장하거나 가져올 때 사용할 키입니다.
+- defaultValue (T): 세션 스토리지에 값이 없을 때 사용할 기본값입니다.
+- onError ((error: Error) => void): 오류가 발생했을 때 호출될 콜백 함수입니다.
+
+#### 반환 값
+
+- value (T): 현재 세션 스토리지의 값을 나타냅니다.
+- setItem ((newValue: T) => void): 세션 스토리지의 값을 설정하는 함수입니다.
+- removeItem (() => void): 세션 스토리지의 값을 제거하고 기본값으로 초기화하는 함수입니다.
