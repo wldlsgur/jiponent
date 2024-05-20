@@ -34,8 +34,6 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install",
-    "postinstall": "husky install",
     "format": "prettier --cache --write .",
     "lint": "eslint --cache ."
   },
