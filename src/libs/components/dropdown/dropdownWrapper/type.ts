@@ -1,6 +1,6 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
-export interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
+export interface Props extends Omit<ComponentProps<'div'>, 'onChange'> {
   defaultValue: string;
   onChange: (newValue: string) => void;
   children: ReactNode;

@@ -1,3 +1,3 @@
-import { HTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-export interface Props extends HTMLAttributes<HTMLParagraphElement> {}
+export interface Props extends ComponentProps<'p'> {}

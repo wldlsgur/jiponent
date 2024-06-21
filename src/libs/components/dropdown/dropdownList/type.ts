@@ -1,7 +1,7 @@
-import { HTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
 export interface Props {
   list: string[];
-  listRest?: HTMLAttributes<HTMLUListElement>;
-  itemRest?: Omit<HTMLAttributes<HTMLLIElement>, 'onClick'>;
+  listRest?: ComponentProps<'ul'>;
+  itemRest?: Omit<ComponentProps<'li'>, 'onClick'>;
 }
