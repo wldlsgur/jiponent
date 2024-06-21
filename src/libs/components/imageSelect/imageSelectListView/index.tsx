@@ -15,7 +15,7 @@ const ImageSelectListView = ({ alt, listRest, itemRest, ...rest }: Props) => {
       {images.map((image) => {
         return (
           <S.Item
-            key={image.lastModified}
+            key={`${image.name}-${image.lastModified}`}
             {...itemRest}
           >
             <ImageSelectItem

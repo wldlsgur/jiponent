@@ -1,4 +1,5 @@
 import { ImageSelectContextProvider } from '../context/imageSelectContext';
+import ImageClearButton from '../imageClearButton';
 import ImageSelectLabel from '../imageSelectLabel';
 import ImageSelectListView from '../imageSelectListView';
 import ImageSelectView from '../imageSelectView';
@@ -20,5 +21,6 @@ const ImageSelectWrapper = ({ limit, onChange, onExceed, children, ...rest }: Pr
 ImageSelectWrapper.Label = ImageSelectLabel;
 ImageSelectWrapper.View = ImageSelectView;
 ImageSelectWrapper.ListView = ImageSelectListView;
+ImageSelectWrapper.ClearButton = ImageClearButton;
 
 export default ImageSelectWrapper;

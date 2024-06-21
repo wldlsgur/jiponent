@@ -15,6 +15,7 @@ export const ImageSelectContext = createContext<ImageSelectContextProps>({
   images: [],
   handleImageSelect: () => {},
   handleRemoveImage: () => {},
+  handleClearImage: () => {},
 });
 
 export const useImageSelectContext = () => useContext(ImageSelectContext);
@@ -37,16 +38,26 @@ export const ImageSelectContextProvider = ({
         return;
       }
 
-      if (selectedImages.length > limit) {
+      const selectedImagesArray = Array.from(selectedImages);
+      const filteredImages = images
+        .filter(
+          (image) =>
+            !selectedImagesArray.some(
+              (selectedImage) =>
+                selectedImage.name === image.name &&
+                selectedImage.lastModified === image.lastModified,
+            ),
+        )
+        .concat(selectedImagesArray);
+
+      if (filteredImages.length > limit) {
         return onExceedRef.current && onExceedRef.current();
       }
 
-      const imagesArray = Array.from(selectedImages);
-
-      onChangeRef.current(imagesArray);
-      setImages(imagesArray);
+      onChangeRef.current(filteredImages);
+      setImages(filteredImages);
     },
-    [limit],
+    [limit, images],
   );
 
   const handleRemoveImage = useCallback(
@@ -59,13 +70,19 @@ export const ImageSelectContextProvider = ({
     [images],
   );
 
+  const handleClearImage = useCallback(() => {
+    onChangeRef.current([]);
+    setImages([]);
+  }, []);
+
   const value = useMemo(
     () => ({
       images,
       handleImageSelect,
       handleRemoveImage,
+      handleClearImage,
     }),
-    [images, handleImageSelect, handleRemoveImage],
+    [images, handleImageSelect, handleRemoveImage, handleClearImage],
   );
 
   useEffect(() => {

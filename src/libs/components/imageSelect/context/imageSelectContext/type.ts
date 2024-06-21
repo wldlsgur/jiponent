@@ -4,6 +4,7 @@ export interface ImageSelectContextProps {
   images: File[];
   handleImageSelect: (event: ChangeEvent<HTMLInputElement>) => void;
   handleRemoveImage: (selectedImage: File) => void;
+  handleClearImage: () => void;
 }
 
 export interface ImageSelectContextProviderProps {
