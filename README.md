@@ -28,13 +28,13 @@ function App() {
 
 JiPonent에서 제공하는 컴포넌트의 사용 방법 및 옵션에 대해서는 해당 [스토리북](https://6645a375b8bd5e22f2b27560-ixqtxyosat.chromatic.com/)에서 확인하실 수 있습니다. 스토리북을 통해 다양한 컴포넌트와 그 사용 예를 시각적으로 확인할 수 있습니다.
 
-## CustomHooks
+## Hooks
 
 JiPonent는 반복되는 로직을 간단하게 사용할 수 있도록 여러 커스텀 훅을 제공합니다.
 
-### useToggle
-
-useToggle은 토글 상태 관리를 위한 커스텀 훅입니다.
+<details>
+  <summary style="font-size:18px"><b>useToggle</b></summary>
+  useToggle은 토글 상태 관리를 위한 커스텀 훅입니다.
 
 #### 사용법
 
@@ -54,10 +54,11 @@ const { isToggle, handleToggle, handleSetTrue, handleSetFalse } = useToggle(fals
 - handleToggle (() => void): 토글 상태를 반전시키는 함수입니다.
 - handleSetTrue (() => void): 토글 상태를 true로 설정하는 함수입니다.
 - handleSetFalse (() => void): 토글 상태를 false로 설정하는 함수입니다.
+</details>
 
-### useClickAway
-
-useClickAway는 지정된 요소 외부를 클릭했을 때 특정 로직을 실행할 수 있도록 도와주는 훅입니다. 이를 통해 드롭다운 메뉴, 모달 등을 구현할 때 유용하게 사용할 수 있습니다.
+<details>
+  <summary style="font-size:18px"><b>useClickAway</b></summary>
+  useClickAway는 지정된 요소 외부를 클릭했을 때 특정 로직을 실행할 수 있도록 도와주는 훅입니다. 이를 통해 드롭다운 메뉴, 모달 등을 구현할 때 유용하게 사용할 수 있습니다.
 
 #### 사용법
 
@@ -76,9 +77,10 @@ return <div ref={ref}>내용</div>;
 #### 반환 값
 
 - ref: useClickAway 훅은 클릭 이벤트 감지를 위해 사용될 요소에 연결할 수 있는 React 참조(React.RefObject)를 반환합니다. 이 참조는 훅을 사용할 컴포넌트 내에서 요소에 할당되어야 합니다.
+</details>
 
-### useLocalStorage
-
+<details>
+  <summary style="font-size:18px"><b>useLocalStorage</b></summary>
 useLocalStorage는 로컬 스토리지(Local Storage) 상태 관리를 위한 커스텀 훅입니다.
 
 #### 사용법
@@ -104,9 +106,10 @@ const { value, setItem, removeItem } = useLocalStorage({
 - value (T): 현재 로컬 스토리지의 값을 나타냅니다.
 - setItem ((newValue: T) => void): 로컬 스토리지의 값을 설정하는 함수입니다.
 - removeItem (() => void): 로컬 스토리지의 값을 제거하고 기본값으로 초기화하는 함수입니다.
+</details>
 
-### useSessionStorage
-
+<details>
+  <summary style="font-size:18px"><b>useSessionStorage</b></summary>
 useSessionStorage는 세션 스토리지(Session Storage) 상태 관리를 위한 커스텀 훅입니다.
 
 #### 사용법
@@ -132,3 +135,36 @@ const { value, setItem, removeItem } = useSessionStorage({
 - value (T): 현재 세션 스토리지의 값을 나타냅니다.
 - setItem ((newValue: T) => void): 세션 스토리지의 값을 설정하는 함수입니다.
 - removeItem (() => void): 세션 스토리지의 값을 제거하고 기본값으로 초기화하는 함수입니다.
+</details>
+
+<details>
+  <summary style="font-size:18px"><b>useResize</b></summary>
+useResize는 React 컴포넌트의 크기 변경을 감지하고 해당 변경 사항을 전달하는 커스텀 훅입니다.
+
+#### 사용법
+
+이 훅은 onResize 콜백 함수를 인자로 받습니다. 이 함수는 컴포넌트의 크기가 변경될 때마다 호출됩니다.
+
+```jsx
+const ref = useResize({
+  onResize: (contentRect) => {
+    console.log('Component size changed:', contentRect);
+  },
+});
+```
+
+이 훅은 ref 객체를 반환합니다. 이 객체를 사용하여 컴포넌트의 DOM 요소를 참조할 수 있습니다.
+
+```jsx
+return <div ref={ref}>My resizable component</div>;
+```
+
+#### 매개변수
+
+- onResize (function): 컴포넌트의 크기가 변경될 때마다 호출되는 콜백 함수입니다. 이 함수는 DOMRectReadOnly 객체를 인자로 받습니다.
+
+#### 반환 값
+
+- ref (ref): 컴포넌트의 DOM 요소를 참조하는 ref 객체입니다.
+
+</details>
