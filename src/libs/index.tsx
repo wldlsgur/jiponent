@@ -10,3 +10,4 @@ export { default as useClickAway } from '@/libs/hooks/useClickAway';
 export { default as useToggle } from '@/libs/hooks/useToggle';
 export { default as useLocalStorage } from '@/libs/hooks/useLocalStorage';
 export { default as useSessionStorage } from '@/libs/hooks/useSessionStorage';
+export { default as useResize } from '@/libs/hooks/useResize';
