@@ -25,7 +25,7 @@ const useResize = ({ onResize }: Props) => {
     observer.observe(element);
 
     return () => {
-      observer.disconnect;
+      observer.disconnect();
     };
   }, [ref]);
 
