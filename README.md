@@ -146,11 +146,7 @@ useResize는 React 컴포넌트의 크기 변경을 감지하고 해당 변경 �
 이 훅은 onResize 콜백 함수를 인자로 받습니다. 이 함수는 컴포넌트의 크기가 변경될 때마다 호출됩니다.
 
 ```jsx
-const ref = useResize({
-  onResize: (contentRect) => {
-    console.log('Component size changed:', contentRect);
-  },
-});
+const ref = useResize(contentRect) => console.log('Component size changed:', contentRect)
 ```
 
 이 훅은 ref 객체를 반환합니다. 이 객체를 사용하여 컴포넌트의 DOM 요소를 참조할 수 있습니다.
@@ -161,7 +157,7 @@ return <div ref={ref}>My resizable component</div>;
 
 #### 매개변수
 
-- onResize (function): 컴포넌트의 크기가 변경될 때마다 호출되는 콜백 함수입니다. 이 함수는 DOMRectReadOnly 객체를 인자로 받습니다.
+- (function): 컴포넌트의 크기가 변경될 때마다 호출되는 콜백 함수입니다. 이 함수는 DOMRectReadOnly 객체를 인자로 받습니다.
 
 #### 반환 값
 
