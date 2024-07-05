@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { Props } from './type';
 
-const useResize = ({ onResize }: Props) => {
+const useResize = (onResize: (contentRect: DOMRectReadOnly) => void) => {
   const ref = useRef(null);
   const onResizeRef = useRef(onResize);
 
