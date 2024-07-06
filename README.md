@@ -146,7 +146,7 @@ useResize는 React 컴포넌트의 크기 변경을 감지하고 해당 변경 �
 이 훅은 onResize 콜백 함수를 인자로 받습니다. 이 함수는 컴포넌트의 크기가 변경될 때마다 호출됩니다.
 
 ```jsx
-const ref = useResize(contentRect) => console.log('Component size changed:', contentRect)
+const ref = useResize((contentRect) => console.log('Component size changed:', contentRect));
 ```
 
 이 훅은 ref 객체를 반환합니다. 이 객체를 사용하여 컴포넌트의 DOM 요소를 참조할 수 있습니다.
@@ -163,4 +163,101 @@ return <div ref={ref}>My resizable component</div>;
 
 - ref (ref): 컴포넌트의 DOM 요소를 참조하는 ref 객체입니다.
 
+</details>
+
+<details>
+  <summary style="font-size:18px"><b>useHover</b></summary>
+useHover는 React 컴포넌트에서 마우스 호버 상태를 관리하는 커스텀 훅입니다. 이 훅은 컴포넌트의 DOM 요소에 마우스 이벤트 리스너를 등록하고, 마우스가 해당 요소 위에 올라가거나 벗어날 때 상태를 업데이트합니다.
+
+#### 사용법
+
+```jsx
+import useHover from './useHover';
+
+const MyComponent = () => {
+  const { ref, isHover } = useHover<HTMLDivElement>();
+
+  return (
+    <div ref={ref}>
+      {isHover ? 'Hovered' : 'Not Hovered'}
+    </div>
+  );
+};
+```
+
+이 코드에서 useHover 훅은 ref 객체와 isHover 상태 변수를 반환합니다. ref 객체를 사용하여 마우스 이벤트를 추적할 DOM 요소를 참조할 수 있습니다. isHover 변수는 마우스가 해당 요소 위에 있는지 여부를 나타냅니다.
+
+#### 매개변수
+
+- 제네릭 타입 T를 사용하여 DOM 요소의 타입을 지정할 수 있습니다. 이 타입은 ref 객체의 타입을 결정합니다.
+
+#### 반환 값
+
+- ref: 마우스 이벤트를 추적할 DOM 요소를 참조하는 ref 객체입니다.
+- isHover: 마우스가 DOM 요소 위에 있는지 여부를 나타내는 boolean 값입니다
+</details>
+
+<details>
+  <summary style="font-size:18px"><b>useRafState</b></summary>
+useRafState는 React 컴포넌트에서 상태를 관리하는 커스텀 훅입니다. 이 훅은 requestAnimationFrame을 사용하여 상태 업데이트를 최적화하여, 부드러운 애니메이션 효과를 제공할 수 있습니다.
+
+#### 사용법
+
+```jsx
+import useRafState from './useRafState';
+
+const MyComponent = () => {
+  const { state, setRafState } = useRafState < number > 0;
+
+  const handleClick = () => {
+    setRafState(state + 1);
+  };
+
+  return <div onClick={handleClick}>Current count: {state}</div>;
+};
+```
+
+이 코드에서 useHover 훅은 ref 객체와 isHover 상태 변수를 반환합니다. ref 객체를 사용하여 마우스 이벤트를 추적할 DOM 요소를 참조할 수 있습니다. isHover 변수는 마우스가 해당 요소 위에 있는지 여부를 나타냅니다.
+
+#### 매개변수
+
+- 제네릭 타입 T를 사용하여 상태의 타입을 지정할 수 있습니다.
+- defaultValue: 초기 상태 값입니다.
+
+#### 반환 값
+
+- state: 현재 상태 값입니다.
+- setRafState: 상태를 업데이트하는 함수입니다. 이 함수는 requestAnimationFrame을 사용하여 상태 업데이트를 최적화합니다.
+</details>
+
+<details>
+  <summary style="font-size:18px"><b>useScroll</b></summary>
+useScroll은 React 컴포넌트에서 스크롤 위치를 관리하는 커스텀 훅입니다. 이 훅은 requestAnimationFrame을 사용하여 스크롤 이벤트 처리를 최적화하여, 부드러운 스크롤 동작을 제공할 수 있습니다.
+
+#### 사용법
+
+```jsx
+import useScroll from './useScroll';
+
+const MyComponent = () => {
+  const { ref, state } = useScroll<HTMLDivElement>();
+
+  return (
+    <div ref={ref}>
+      Current scroll position: x={state.x}, y={state.y}
+    </div>
+  );
+};
+```
+
+이 코드에서 useScroll 훅은 ref 객체와 스크롤 위치 상태 객체를 반환합니다. ref 객체를 사용하여 스크롤 이벤트를 추적할 DOM 요소를 참조할 수 있습니다. state 객체는 현재 스크롤 위치의 x, y 좌표를 나타냅니다.
+
+#### 매개변수
+
+- 제네릭 타입 T를 사용하여 참조할 DOM 요소의 타입을 지정할 수 있습니다.
+
+#### 반환 값
+
+- ref: 스크롤 이벤트를 추적할 DOM 요소를 참조하는 ref 객체입니다.
+- state: 현재 스크롤 위치의 x, y 좌표를 나타내는 객체입니다.
 </details>
