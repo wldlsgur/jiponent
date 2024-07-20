@@ -1,22 +1,22 @@
 import { createPortal } from 'react-dom';
 import useBodyScroll from './hooks/useBodyScroll';
-import * as S from './style';
+import * as S from './style.module.css';
 import { Props } from './type';
 import { useClickAway } from '@/libs';
+import combineClassName from '@/libs/utils/combineClassName';
 
-const Modal = ({ visible, children, onClose, backgroundColor, zIndex, ...rest }: Props) => {
-  const ref = useClickAway<HTMLElement>(() => onClose());
+const Modal = ({ visible, children, onClose, className, ...rest }: Props) => {
+  const ref = useClickAway<HTMLDivElement>(() => onClose());
   useBodyScroll(visible);
+  const backgroundClass = `${S.default.background} ${visible ? '' : S.default.hidden}`;
 
   return createPortal(
-    <S.Background
-      $visible={visible}
-      $backgroundColor={backgroundColor}
-      $zIndex={zIndex}
+    <div
+      className={combineClassName(backgroundClass, className)}
       {...rest}
     >
-      <S.Container ref={ref}>{children}</S.Container>
-    </S.Background>,
+      <div ref={ref}>{children}</div>
+    </div>,
     document.body,
   );
 };

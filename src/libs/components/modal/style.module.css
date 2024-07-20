@@ -1,0 +1,17 @@
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(76, 76, 76, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: auto;
+}
+
+.background.hidden {
+  display: none;
+}

@@ -10,8 +10,6 @@ import { Modal } from '../..';
  * - **visible:** 모달의 표시 여부를 제어합니다. `true`일 때 모달이 화면에 표시됩니다.
  * - **children:** 모달 내부에 표시될 콘텐츠입니다.
  * - **onClose:** 모달을 닫는 함수입니다.
- * - **backgroundColor:** 모달 배경의 색상을 설정합니다. (DefaultValue = '#23232390')
- * - **zIndex:** 모달의 z-index를 설정합니다. (DefaultValue = 999)
  * - **...rest:** Background의 `<div>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
  *
  * ### 사용 사례(Stories)
@@ -40,14 +38,6 @@ const meta: Meta<typeof Modal> = {
       action: 'clicked',
       description: '모달을 닫는 함수',
     },
-    backgroundColor: {
-      control: 'color',
-      description: '모달 배경의 색상을 설정합니다.',
-    },
-    zIndex: {
-      control: 'number',
-      description: '모달의 z-index를 설정합니다.',
-    },
   },
 };
 
@@ -57,7 +47,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   decorators: [
-    (Story, { args }) => {
+    (Story) => {
       const [visible, setVisible] = useState(false);
 
       return (
@@ -70,8 +60,6 @@ export const Default: Story = {
           </button>
           <Story
             args={{
-              backgroundColor: args.backgroundColor,
-              zIndex: args.zIndex,
               visible,
               onClose: () => setVisible(false),
               children: (
