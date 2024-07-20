@@ -38,8 +38,8 @@
     "lint": "eslint --cache ."
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.0",
+    "react-dom": "^18.0"
   },
   "dependencies": {
     "styled-components": "^6.1.11"
@@ -60,7 +60,9 @@
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
+    "@vanilla-extract/vite-plugin": "^4.0.13",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react-swc": "^3.7.0",
     "chromatic": "^11.3.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -79,7 +81,8 @@
     "storybook": "^8.0.10",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-libcss": "^1.1.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

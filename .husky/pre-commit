@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo 'husky-check ESLint && Prettier rules'
+echo 'Running lint-staged...'
 npx lint-staged
