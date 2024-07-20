@@ -1,0 +1,16 @@
+.horizontal {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #d1d5db;
+}
+
+.vertical {
+  display: inline-block;
+  width: 1px;
+  height: 1rem;
+  vertical-align: middle;
+  border: none;
+  background-color: #d1d5db;
+}
