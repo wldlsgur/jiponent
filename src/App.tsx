@@ -1,7 +1,7 @@
-import { Divider } from './libs/index';
+import './style.css';
 
 const App = () => {
-  return <Divider />;
+  return <></>;
 };
 
 export default App;
