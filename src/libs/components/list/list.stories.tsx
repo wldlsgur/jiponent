@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import { List } from '../../libs';
+import { ReactNode } from 'react';
+import { List } from '../..';
 
 /**
  * ## List 컴포넌트
@@ -47,7 +47,7 @@ type Story = StoryObj<typeof meta>;
 export const NumberList: Story = {
   args: {
     data: ['one', 'two', 'three'],
-    children: (data: unknown, index: number): React.ReactNode => {
+    children: (data: unknown, index: number): ReactNode => {
       const value = data as string;
       return (
         <li
@@ -64,7 +64,7 @@ export const NumberList: Story = {
 export const FruitList: Story = {
   args: {
     data: ['apple', 'banana', 'orange'],
-    children: (data: unknown, index: number): React.ReactNode => {
+    children: (data: unknown, index: number): ReactNode => {
       const value = data as string;
       return (
         <li

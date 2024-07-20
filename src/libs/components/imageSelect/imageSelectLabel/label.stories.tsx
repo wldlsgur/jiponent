@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ImageSelect } from '../../libs';
+import { ImageSelect } from '../../..';
 
 /**
  * ## ImageSelectLabel 컴포넌트

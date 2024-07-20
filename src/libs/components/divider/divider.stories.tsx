@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import { Divider } from '../../libs';
+import { Divider } from '../..';
 
 /**
  * ## Divider 컴포넌트

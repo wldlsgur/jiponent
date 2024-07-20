@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Modal } from '../../libs';
+import { Modal } from '../..';
 
 /**
  * ## Modal 컴포넌트

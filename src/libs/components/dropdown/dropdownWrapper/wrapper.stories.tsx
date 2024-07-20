@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { Dropdown } from '../../libs';
+import { Dropdown } from '../../..';
 
 /**
  * ## Dropdown 컴포넌트

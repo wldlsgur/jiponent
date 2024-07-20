@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { ImageSelect } from '../../libs';
+import { ImageSelect } from '../../..';
 
 /**
  * ## ImageSelectView 컴포넌트
