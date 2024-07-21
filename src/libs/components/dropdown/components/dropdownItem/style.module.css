@@ -1,0 +1,22 @@
+.item {
+  list-style: none;
+}
+
+.item:first-child {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.item:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button {
+  width: 100%;
+  heihgt: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 1rem;
+}

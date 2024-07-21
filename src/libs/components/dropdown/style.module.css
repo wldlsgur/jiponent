@@ -1,0 +1,10 @@
+.list {
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid #4a5568;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
