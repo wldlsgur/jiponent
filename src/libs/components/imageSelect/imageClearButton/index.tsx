@@ -1,17 +1,17 @@
 import { useImageSelectContext } from '../context/imageSelectContext';
-import { Button } from './style';
 import { Props } from './type';
 
 const ImageClearButton = ({ children, ...rest }: Props) => {
   const { handleClearImage } = useImageSelectContext();
 
   return (
-    <Button
+    <button
+      type='button'
       onClick={handleClearImage}
       {...rest}
     >
       {children}
-    </Button>
+    </button>
   );
 };
 

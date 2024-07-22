@@ -1,7 +1,8 @@
 import { ComponentProps } from 'react';
 
-export interface Props extends Omit<ComponentProps<'img'>, 'src' | 'alt'> {
+export interface Props {
   alt: string;
-  listRest?: ComponentProps<'ul'>;
-  itemRest?: ComponentProps<'li'>;
+  ulAttribute?: ComponentProps<'ul'>;
+  liAttribute?: ComponentProps<'li'>;
+  imgAttribute?: Omit<ComponentProps<'img'>, 'src' | 'alt'>;
 }

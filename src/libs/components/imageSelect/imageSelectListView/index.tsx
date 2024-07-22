@@ -1,32 +1,39 @@
 import ImageSelectItem from '../components/imageSelectItem';
 import { useImageSelectContext } from '../context/imageSelectContext';
-import * as S from './style';
+import * as S from './style.module.css';
 import { Props } from './type';
+import combineClassName from '@/libs/utils/combineClassName';
 
-const ImageSelectListView = ({ alt, listRest, itemRest, ...rest }: Props) => {
+const ImageSelectListView = ({ alt, ulAttribute, liAttribute, imgAttribute }: Props) => {
   const { images } = useImageSelectContext();
+  const { className: ulClassName, ...restUlAttribute } = ulAttribute || {};
+  const { className: liClassName, ...restLiAttribute } = liAttribute || {};
 
   if (!images || images.length === 0) {
     return null;
   }
 
   return (
-    <S.List {...listRest}>
+    <ul
+      className={combineClassName(S.default.list, ulClassName)}
+      {...restUlAttribute}
+    >
       {images.map((image) => {
         return (
-          <S.Item
+          <li
             key={`${image.name}-${image.lastModified}`}
-            {...itemRest}
+            className={combineClassName(S.default.item, liClassName)}
+            {...restLiAttribute}
           >
             <ImageSelectItem
               imageFile={image}
               alt={alt}
-              {...rest}
+              {...imgAttribute}
             />
-          </S.Item>
+          </li>
         );
       })}
-    </S.List>
+    </ul>
   );
 };
 

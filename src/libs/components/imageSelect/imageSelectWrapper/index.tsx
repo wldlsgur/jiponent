@@ -3,7 +3,6 @@ import ImageClearButton from '../imageClearButton';
 import ImageSelectLabel from '../imageSelectLabel';
 import ImageSelectListView from '../imageSelectListView';
 import ImageSelectView from '../imageSelectView';
-import * as S from './style';
 import { Props } from './type';
 
 const ImageSelectWrapper = ({ limit, onChange, onExceed, children, ...rest }: Props) => {
@@ -13,7 +12,7 @@ const ImageSelectWrapper = ({ limit, onChange, onExceed, children, ...rest }: Pr
       onChange={onChange}
       onExceed={onExceed}
     >
-      <S.Wrapper {...rest}>{children}</S.Wrapper>
+      <div {...rest}>{children}</div>
     </ImageSelectContextProvider>
   );
 };
