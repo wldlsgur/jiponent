@@ -16,7 +16,7 @@ import { Dropdown } from '@/libs';
  *
  * ### 사용 사례(Stories)
  *
- * 1. **BaseDropdown:**
+ * 1. **Default:**
  * - 사용자는 드롭다운에서 "선택 없음", "1", "2", "3" 중 하나를 선택할 수 있습니다.
  * - `defaultValue`를 통해 기본 선택값을 "선택 없음"으로 설정합니다.
  */
@@ -60,7 +60,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const BaseDropdown: Story = {
+export const Default: Story = {
   args: {
     defaultValue: '선택 없음',
     list: ['선택 없음', '1', '2', '3'],

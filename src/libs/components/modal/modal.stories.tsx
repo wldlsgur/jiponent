@@ -9,7 +9,7 @@ import { Modal } from '../..';
  * ### 속성(Props)
  * - **visible:** 모달의 표시 여부를 제어합니다. `true`일 때 모달이 화면에 표시됩니다.
  * - **children:** 모달 내부에 표시될 콘텐츠입니다.
- * - **onClose:** 모달을 닫는 함수입니다.
+ * - **onClose:** 모달이 닫힐 때 실행되는 콜백함수입니다.
  * - **...rest:** Background의 `<div>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
  *
  * ### 사용 사례(Stories)
@@ -36,7 +36,7 @@ const meta: Meta<typeof Modal> = {
     },
     onClose: {
       action: 'clicked',
-      description: '모달을 닫는 함수',
+      description: '모달이 닫힐 때 실행되는 콜백함수',
     },
   },
 };
