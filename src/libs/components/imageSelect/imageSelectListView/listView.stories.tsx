@@ -9,8 +9,8 @@ import { ImageSelect } from '../../..';
  *
  * ### Props 속성
  * - **alt:** `<img>` 태그의 alt 속성을 강제로 받습니다.
- * - **listRest:** `<ul>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
- * - **itemRest:** `<li>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
+ * - **ulAttribute:** `<ul>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
+ * - **liAttribute:** `<li>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
  * - **...rest:** `<img>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
  *
  * ### 사용 사례(Stories)
@@ -30,11 +30,11 @@ const meta: Meta<typeof ImageSelect.ListView> = {
       control: 'text',
       description: '`<img>` 태그의 alt 속성을 강제로 받습니다.',
     },
-    listRest: {
+    ulAttribute: {
       control: 'object',
       description: '`<ul>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.',
     },
-    itemRest: {
+    liAttribute: {
       control: 'object',
       description: '`<li>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.',
     },
