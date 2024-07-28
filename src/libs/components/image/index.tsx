@@ -4,7 +4,7 @@ import { Props } from './type';
 const Image = ({
   width,
   height,
-  lazy,
+  lazy = true,
   placeholder,
   threshold = 0.5,
   src,
