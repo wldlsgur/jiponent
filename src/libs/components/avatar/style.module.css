@@ -1,0 +1,8 @@
+.container {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #dadada;
+  overflow: hidden;
+  background-color: #eee;
+}

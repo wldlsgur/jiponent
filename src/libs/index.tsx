@@ -5,6 +5,8 @@ export { default as List } from '@/libs/components/list';
 export { default as ImageSelect } from '@/libs/components/imageSelect/imageSelectWrapper';
 export { default as Modal } from '@/libs/components/modal';
 export { default as Image } from '@/libs/components/image';
+export { default as Avatar } from '@/libs/components/avatar';
+export { default as AvatarGroup } from '@/libs/components/avatarGroup';
 
 // hooks
 export { default as useClickAway } from '@/libs/hooks/useClickAway';
