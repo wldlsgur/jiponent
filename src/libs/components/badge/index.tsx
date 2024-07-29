@@ -18,7 +18,7 @@ const Badge = ({
 }: Props) => {
   let content: ReactNode = count;
 
-  if (typeof count === 'number' && count > limit) {
+  if (typeof count === 'number' && limit && count > limit) {
     content = `${limit}+`;
   }
 
