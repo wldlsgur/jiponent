@@ -8,7 +8,7 @@ import { Avatar, Badge } from '@/libs';
  * 배지의 크기, 배경색, 텍스트 색상, 폰트 크기, 표시 여부 등을 설정할 수 있습니다.
  *
  * ### 속성(Props)
- * - **count:** 배지에 표시할 숫자 값을 설정합니다.
+ * - **count:** 배지에 표시할 숫자, 값, 문자열을 설정합니다.
  * - **limit:** 숫자가 이 값을 초과하면 `limit+` 형태로 표시됩니다.
  * - **dot:** true일 경우 배지를 점 형태로 표시합니다.
  * - **backgroundColor:** 배지의 배경색을 설정합니다. 기본값은 '#f44'입니다.
@@ -40,8 +40,8 @@ const meta: Meta<typeof Badge> = {
   tags: ['autodocs'],
   argTypes: {
     count: {
-      control: 'number',
-      description: '배지에 표시할 숫자 값을 설정합니다.',
+      control: 'text',
+      description: '배지에 표시할 숫자 값, 문자열을 설정합니다.',
     },
     limit: {
       control: 'number',

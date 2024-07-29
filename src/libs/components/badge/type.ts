@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from 'react';
 
 export interface Props extends ComponentProps<'sub'> {
   children: ReactNode;
-  count: number;
+  count: number | string;
   limit: number;
   dot?: boolean;
   backgroundColor?: string;
