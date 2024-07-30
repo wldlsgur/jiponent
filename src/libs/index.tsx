@@ -8,6 +8,7 @@ export { default as Image } from '@/libs/components/image';
 export { default as Avatar } from '@/libs/components/avatar';
 export { default as AvatarGroup } from '@/libs/components/avatarGroup';
 export { default as Badge } from '@/libs/components/badge';
+export { default as Accordion } from '@/libs/components/accordion';
 
 // hooks
 export { default as useClickAway } from '@/libs/hooks/useClickAway';

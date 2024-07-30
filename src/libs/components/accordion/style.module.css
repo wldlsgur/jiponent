@@ -1,0 +1,19 @@
+.container {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.content {
+  overflow: hidden;
+  transition-property: height;
+  transition-timing-function: ease;
+}
