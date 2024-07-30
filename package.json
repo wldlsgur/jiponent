@@ -52,6 +52,7 @@
     "@storybook/react": "^8.0.10",
     "@storybook/react-vite": "^8.0.10",
     "@storybook/test": "^8.0.10",
+    "@types/feather-icons": "^4.29.4",
     "@types/node": "^20.12.11",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -88,6 +89,7 @@
     ]
   },
   "dependencies": {
+    "feather-icons": "^4.29.2",
     "uuid": "^10.0.0"
   }
 }
