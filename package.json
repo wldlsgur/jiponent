@@ -89,6 +89,7 @@
     ]
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "feather-icons": "^4.29.2",
     "uuid": "^10.0.0"
   }
