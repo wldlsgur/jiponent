@@ -1,0 +1,9 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.anchor {
+  color: inherit;
+  text-decoration: none;
+}
