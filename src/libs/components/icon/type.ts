@@ -6,6 +6,6 @@ export interface Props extends Omit<ComponentProps<'img'>, 'src' | 'alt'> {
   size?: number | string;
   strokeWidth?: number | string;
   color?: string;
-  fill?: string;
+  fill: string;
   rotate?: number;
 }
