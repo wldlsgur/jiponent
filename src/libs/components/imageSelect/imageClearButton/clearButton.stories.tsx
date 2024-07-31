@@ -9,7 +9,7 @@ import { ImageSelect } from '../../..';
  *
  * ### Props 속성
  * - **children:** `<button>` 태그의 children 속성을 강제로 받습니다.
- * - **...rest:** `<button>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
+ * - **...rest:** `<button>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
  *
  * ### 사용 사례(Stories)
  * 1. **ImageClearButton:**
