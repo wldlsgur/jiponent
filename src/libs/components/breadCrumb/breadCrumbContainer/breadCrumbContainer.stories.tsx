@@ -15,10 +15,10 @@ import { BreadCrumb, Icon } from '@/libs';
  * ### 사용 사례(Stories)
  *
  * 1. **> BreadCrumb:**
- * - > 구분자를 통해 경로를 표시합니다.
+ * - > 아이콘 구분자를 통해 경로를 표시합니다.
  *
- * 2. **`/` BreadCrumb:**
- * - / 구분자를 통해 경로를 표시합니다.
+ * 2. **-> BreadCrumb:**
+ * - -> 아이콘 구분자를 통해 경로를 표시합니다.
  */
 
 const meta: Meta<typeof BreadCrumb> = {

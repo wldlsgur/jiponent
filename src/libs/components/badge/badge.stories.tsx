@@ -21,10 +21,13 @@ import { Avatar, Badge } from '@/libs';
  *
  * 1. **Default:**
  * - 기본 배지 스타일을 설정하고 카운트 값을 표시합니다.
+ *
  * 2. **Dot Badge:**
  * - 점 형태로 배지를 표시합니다.
+ *
  * 3. **Limit Badge:**
  * - 카운트 값이 제한을 초과할 경우 `limit+` 형태로 표시합니다.
+ *
  * 4. **Show Zero:**
  * - count 0을 배지 표시합니다.
  */
@@ -65,14 +68,6 @@ const meta: Meta<typeof Badge> = {
       control: 'boolean',
       description: 'count가 0을 배지 표시할지 여부를 설정합니다.',
     },
-    className: {
-      control: 'text',
-      description: '추가적인 CSS 클래스를 설정할 수 있습니다.',
-    },
-    style: {
-      control: 'object',
-      description: '인라인 스타일을 추가할 수 있습니다.',
-    },
   },
 };
 
@@ -95,7 +90,6 @@ export const Default: Story = {
     textColor: 'white',
     fontSize: 10,
     showZero: false,
-    className: '',
     style: { transform: 'translate(5%, 20%)' },
   },
 };
@@ -114,7 +108,6 @@ export const DotBadge: Story = {
     textColor: 'white',
     fontSize: 10,
     showZero: false,
-    className: '',
     style: { transform: 'translate(-100%, 50%)' },
   },
 };
@@ -134,7 +127,6 @@ export const LimitBadge: Story = {
     textColor: 'white',
     fontSize: 10,
     showZero: false,
-    className: '',
     style: { transform: 'translate(5%, 20%)' },
   },
 };
@@ -154,7 +146,6 @@ export const ShowZeroBadge: Story = {
     textColor: 'white',
     fontSize: 10,
     showZero: true,
-    className: '',
     style: { transform: 'translate(5%, 20%)' },
   },
 };

@@ -18,6 +18,13 @@ import { Accordion } from '@/libs';
  *
  * 1. **Default:**
  * - 기본 아코디언 컴포넌트입니다. 클릭을 통해 토글할 수 있습니다.
+ *
+ * 2. **OpenByDefault:**
+ * - 기본적으로 열려 있는 아코디언 컴포넌트입니다.
+ *
+ * 3. **CustomDuration:**
+ * - 트랜지션 지속 시간이 1초로 설정된 아코디언 컴포넌트입니다.
+ *
  */
 
 const meta: Meta<typeof Accordion> = {
@@ -39,10 +46,6 @@ const meta: Meta<typeof Accordion> = {
     header: {
       control: 'text',
       description: '아코디언의 헤더로 표시될 요소입니다.',
-    },
-    className: {
-      control: 'text',
-      description: '추가적으로 적용할 클래스 이름입니다.',
     },
     children: {
       control: 'text',
@@ -79,15 +82,5 @@ export const CustomDuration: Story = {
     duration: 1000,
     header: '트랜지션 지속 시간 1초',
     children: '이 아코디언은 트랜지션 지속 시간이 1초입니다.',
-  },
-};
-
-export const CustomClassName: Story = {
-  args: {
-    defaultVisible: false,
-    duration: 300,
-    header: '커스텀 클래스 적용',
-    className: 'custom-accordion',
-    children: '이 아코디언은 커스텀 클래스를 적용합니다.',
   },
 };
