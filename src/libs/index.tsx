@@ -11,6 +11,7 @@ export { default as Badge } from '@/libs/components/badge';
 export { default as Accordion } from '@/libs/components/accordion';
 export { default as Icon } from '@/libs/components/icon';
 export { default as BreadCrumb } from '@/libs/components/breadCrumb/breadCrumbContainer';
+export { default as Input } from '@/libs/components/input/inputContainer';
 
 // hooks
 export { default as useClickAway } from '@/libs/hooks/useClickAway';
