@@ -74,8 +74,8 @@ export const Default: Story = {
         <Pagination.PrevButton>이전</Pagination.PrevButton>
         <Pagination.PageButtons
           maxCount={10}
-          activeColor='gray'
-          activeBackgroundColor='red'
+          activeColor='#ffffff'
+          activeBackgroundColor='#007bff'
         />
         <Pagination.NextButton>다음</Pagination.NextButton>
       </>
