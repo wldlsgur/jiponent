@@ -13,6 +13,7 @@ export { default as Icon } from '@/libs/components/icon';
 export { default as BreadCrumb } from '@/libs/components/breadCrumb/breadCrumbContainer';
 export { default as Input } from '@/libs/components/input/inputContainer';
 export { default as Pagination } from '@/libs/components/pagination/paginationContainer';
+export { default as Progress } from '@/libs/components/progress';
 
 // hooks
 export { default as useClickAway } from '@/libs/hooks/useClickAway';
