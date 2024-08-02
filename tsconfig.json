@@ -27,6 +27,6 @@
     "declaration": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*", "vite.config.ts"],
+  "include": ["src/**/*", ".eslintrc.cjs", "vite.config.ts", ".storybook/main.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
