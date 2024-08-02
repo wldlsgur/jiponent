@@ -26,7 +26,7 @@ function App() {
 
 ## Components
 
-JiPonent에서 제공하는 컴포넌트의 사용 방법 및 옵션에 대해서는 해당 [스토리북](https://6645a375b8bd5e22f2b27560-dklnuhawnr.chromatic.com/)에서 확인하실 수 있습니다. 스토리북을 통해 다양한 컴포넌트와 그 사용 예를 시각적으로 확인할 수 있습니다.
+JiPonent에서 제공하는 컴포넌트의 사용 방법 및 옵션에 대해서는 해당 [스토리북](https://6645a375b8bd5e22f2b27560-becgdkuplw.chromatic.com/)에서 확인하실 수 있습니다. 스토리북을 통해 다양한 컴포넌트와 그 사용 예를 시각적으로 확인할 수 있습니다.
 
 ## Hooks
 
