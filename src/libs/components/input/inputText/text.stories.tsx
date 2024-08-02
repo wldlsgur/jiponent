@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@/libs';
 
 /**
- * ## InputText 컴포넌트
+ * ## Text 컴포넌트
  *
  * 이 컴포넌트는 입력 필드 컴포넌트로, 사용자가 텍스트를 입력할 수 있는 필드를 제공합니다.
  *
@@ -35,7 +35,7 @@ import { Input } from '@/libs';
  */
 
 const meta: Meta<typeof Input.Text> = {
-  title: 'Components/Input/InputText',
+  title: 'Components/Input/Text',
   component: Input.Text,
   parameters: {
     layout: 'centered',

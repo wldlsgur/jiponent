@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@/libs';
 
 /**
- * ## InputErrorMessage 컴포넌트
+ * ## ErrorMessage 컴포넌트
  *
  * 이 컴포넌트는 입력 필드의 에러 메시지를 표시하는 컴포넌트입니다.
  *
@@ -20,7 +20,7 @@ import { Input } from '@/libs';
  */
 
 const meta: Meta<typeof Input.ErrorMessage> = {
-  title: 'Components/Input/InputErrorMessage',
+  title: 'Components/Input/ErrorMessage',
   component: Input.ErrorMessage,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { BreadCrumb, Icon } from '@/libs';
 
 /**
- * ## BreadCrumbContainer 컴포넌트
+ * ## BreadCrumb 컴포넌트
  *
  * 이 컴포넌트는 페이지 내의 경로를 표시하기 위한 네비게이션을 제공합니다.
  * BreadCrumbItem을 자식으로 사용하여 각 경로를 나타냅니다.
@@ -10,19 +10,19 @@ import { BreadCrumb, Icon } from '@/libs';
  * ### 속성(Props)
  * - **children:** BreadCrumbItem 컴포넌트들이 포함될 자식 요소입니다.
  * - **separator:** 경로를 구분하는 구분자 문자열입니다.
- * - **...rest:** `<nav>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
+ * - **...rest:** `<nav>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
  *
  * ### 사용 사례(Stories)
  *
- * 1. **> BreadCrumb:**
+ * 1. **BreadCrumb1:**
  * - > 아이콘 구분자를 통해 경로를 표시합니다.
  *
- * 2. **-> BreadCrumb:**
+ * 2. **BreadCrumb2:**
  * - -> 아이콘 구분자를 통해 경로를 표시합니다.
  */
 
 const meta: Meta<typeof BreadCrumb> = {
-  title: 'Components/BreadCrumb/BreadCrumbContainer',
+  title: 'Components/BreadCrumb/BreadCrumb',
   component: BreadCrumb,
   parameters: {
     layout: 'centered',

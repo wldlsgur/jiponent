@@ -3,16 +3,22 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ImageSelect } from '../../..';
 
 /**
- * ## ImageSelectWrapper 컴포넌트
+ * ## ImageSelect 컴포넌트
  *
  * 이 컴포넌트는 이미지 업로드 기능을 구현하기 위한 래퍼 컴포넌트입니다. 사용자는 이 컴포넌트를 통해 이미지를 업로드하고, 업로드된 이미지를 보거나 관리할 수 있습니다.
+ *
+ * ### 서브 컴포넌트
+ * - **ImageSelect.Label:** 이미지 업로드를 위한 입력 필드를 렌더링하는 레이블입니다. `multiple` 속성을 통해 다중 이미지 업로드를 설정할 수 있습니다.
+ * - **ImageSelect.View:** 업로드된 단일 이미지를 미리보기할 수 있는 컴포넌트입니다.
+ * - **ImageSelect.ListView:** 업로드된 이미지들을 리스트 형태로 보여주는 컴포넌트입니다.
+ * - **ImageSelect.ClearButton:** 업로드된 이미지를 모두 삭제할 수 있는 버튼입니다.
  *
  * ### 속성(Props)
  * - **children:** 이 컴포넌트는 자식 컴포넌트로 `ImageSelect.Label`, `ImageSelect.View`, `ImageSelect.ListView, `ImageSelect.ClearButton`를 받습니다. 이를 통해 사용자는 이미지 업로드 입력창, 업로드된 이미지 보기, 업로드된 이미지 리스트 보기, 이미지 전체 삭제 등의 기능을 사용할 수 있습니다.
  * - **limit:** 이미지를 다중으로 업로드할 때, 최대 업로드 가능한 이미지의 갯수를 제한합니다. 기본값은 1로 설정되어 있으며, 이는 단일 이미지만 업로드 가능함을 의미합니다. 다중 이미지 업로드를 원하시는 경우 이 값을 조정해 주세요.
  * - **onChange:** 사용자가 이미지를 선택하거나 제거할 때마다 호출되는 콜백 함수입니다. 이 함수는 현재 선택되어 있는 이미지들의 목록을 배열 형태로 제공받습니다.
  * - **onExceed:** 사용자가 이미지를 선택할 때 limit를 초과하면 호출되는 콜백 함수입니다.
- * - **...rest:** `<div>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
+ * - **...rest:** `<div>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
  *
  * ### 사용 사례(Stories)
  *
@@ -27,7 +33,7 @@ import { ImageSelect } from '../../..';
  */
 
 const meta: Meta<typeof ImageSelect> = {
-  title: 'Components/ImageSelect/ImageSelectWrapper',
+  title: 'Components/ImageSelect/ImageSelect',
   component: ImageSelect,
   parameters: {
     layout: 'centered',
@@ -48,7 +54,8 @@ const meta: Meta<typeof ImageSelect> = {
       description: '선택된 이미지 개수가 limit를 초과할 시 호출되는 함수입니다.',
     },
     children: {
-      description: '자식으로 올 서브 컴포넌트를 지정합니다.',
+      description:
+        'ImageSelect 내에 렌더링될 서브 컴포넌트(ImageSelect.Label, ImageSelect.ClearButton, ImageSelect.ListView, ImageSelect.View)를 정의합니다.',
     },
   },
 };

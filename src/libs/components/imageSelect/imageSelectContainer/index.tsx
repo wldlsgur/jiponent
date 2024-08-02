@@ -1,5 +1,5 @@
 import { ImageSelectContextProvider } from '../context/imageSelectContext';
-import ImageClearButton from '../imageClearButton';
+import ImageClearButton from '../imageSelectClearButton';
 import ImageSelectLabel from '../imageSelectLabel';
 import ImageSelectListView from '../imageSelectListView';
 import ImageSelectView from '../imageSelectView';

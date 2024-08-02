@@ -3,23 +3,23 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ImageSelect } from '../../..';
 
 /**
- * ## ImageSelectListView 컴포넌트
+ * ## ListView 컴포넌트
  *
- * ImageSelectListView 컴포넌트는 사용자가 선택한 다중 이미지 파일을 선택하고 미리 볼 수 있습니다.
+ * ListView 컴포넌트는 사용자가 선택한 다중 이미지 파일을 선택하고 미리 볼 수 있습니다.
  *
  * ### Props 속성
  * - **alt:** `<img>` 태그의 alt 속성을 강제로 받습니다.
- * - **ulAttribute:** `<ul>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
- * - **liAttribute:** `<li>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
- * - **...rest:** `<img>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다. 예를 들어, 클래스 이름, 스타일 등을 정의할 수 있습니다.
+ * - **ulAttribute:** `<ul>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
+ * - **liAttribute:** `<li>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
+ * - **...rest:** `<img>` 태그에 적용할 수 있는 모든 표준 HTML 속성을 지원합니다.
  *
  * ### 사용 사례(Stories)
- * 1. **ImageSelectListView:**
+ * 1. **Default:**
  * - 이 스토리는 사용자가 선택한 다중 이미지 파일을 미리보기 위한 기본 설정을 보여줍니다. 사용자는 선택한 이미지 모두 볼 수 있습니다.
  */
 
 const meta: Meta<typeof ImageSelect.ListView> = {
-  title: 'Components/ImageSelect/ImageSelectListView',
+  title: 'Components/ImageSelect/ListView',
   component: ImageSelect.ListView,
   parameters: {
     layout: 'centered',
@@ -45,7 +45,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const ImageSelectListView: Story = {
+export const Default: Story = {
   decorators: [
     (Story) => {
       return (

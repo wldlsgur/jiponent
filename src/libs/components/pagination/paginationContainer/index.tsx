@@ -1,6 +1,6 @@
 import { PaginationProvider } from '../context';
-import PageButtons from '../paginationButtons';
 import NextButton from '../paginationNextButton';
+import PageButtons from '../paginationPageButtons';
 import PrevButton from '../paginationPrevButton';
 import * as S from './style.module.css';
 import { Props } from './type';

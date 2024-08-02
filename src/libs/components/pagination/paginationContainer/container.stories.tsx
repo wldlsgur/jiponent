@@ -27,7 +27,7 @@ import { Pagination } from '@/libs';
  */
 
 const meta: Meta<typeof Pagination> = {
-  title: 'Components/Pagination/Container',
+  title: 'Components/Pagination/Pagination',
   component: Pagination,
   parameters: {
     layout: 'centered',
@@ -53,7 +53,8 @@ const meta: Meta<typeof Pagination> = {
     },
     children: {
       control: 'object',
-      description: '페이지네이션에 포함될 자식 컴포넌트를 지정합니다.',
+      description:
+        'Pagination 내에 렌더링될 서브 컴포넌트(Pagination.NextButton, Pagination.PageButtons, Pagination.PrevButton)를 정의합니다.',
     },
   },
 };

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@/libs';
 
 /**
- * ## InputLabel 컴포넌트
+ * ## Label 컴포넌트
  *
  * 이 컴포넌트는 입력 필드의 레이블을 표시하는 컴포넌트입니다.
  *
@@ -19,7 +19,7 @@ import { Input } from '@/libs';
  */
 
 const meta: Meta<typeof Input.Label> = {
-  title: 'Components/Input/InputLabel',
+  title: 'Components/Input/Label',
   component: Input.Label,
   parameters: {
     layout: 'centered',
