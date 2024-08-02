@@ -5,8 +5,8 @@ import combineClassName from '@/libs/utils/combineClassName';
 
 const PageButtons = ({
   maxCount,
-  activeColor,
-  activeBackgroundColor,
+  activeColor = '#ffffff',
+  activeBackgroundColor = '#007bff',
   className,
   style,
   ...rest
