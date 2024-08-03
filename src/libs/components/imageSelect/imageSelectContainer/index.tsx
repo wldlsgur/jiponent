@@ -5,7 +5,7 @@ import ImageSelectListView from '../imageSelectListView';
 import ImageSelectView from '../imageSelectView';
 import { Props } from './type';
 
-const ImageSelectWrapper = ({ limit, onChange, onExceed, children, ...rest }: Props) => {
+const ImageSelectContainer = ({ limit, onChange, onExceed, children, ...rest }: Props) => {
   return (
     <ImageSelectContextProvider
       limit={limit}
@@ -17,9 +17,9 @@ const ImageSelectWrapper = ({ limit, onChange, onExceed, children, ...rest }: Pr
   );
 };
 
-ImageSelectWrapper.Label = ImageSelectLabel;
-ImageSelectWrapper.View = ImageSelectView;
-ImageSelectWrapper.ListView = ImageSelectListView;
-ImageSelectWrapper.ClearButton = ImageClearButton;
+ImageSelectContainer.Label = ImageSelectLabel;
+ImageSelectContainer.View = ImageSelectView;
+ImageSelectContainer.ListView = ImageSelectListView;
+ImageSelectContainer.ClearButton = ImageClearButton;
 
-export default ImageSelectWrapper;
+export default ImageSelectContainer;
