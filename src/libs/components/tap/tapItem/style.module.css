@@ -1,0 +1,9 @@
+.title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  border: none;
+}

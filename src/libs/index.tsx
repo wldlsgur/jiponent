@@ -16,6 +16,7 @@ export { default as Pagination } from '@/libs/components/pagination/paginationCo
 export { default as Progress } from '@/libs/components/progress';
 export { default as Skeleton } from '@/libs/components/skeleton';
 export { default as Toggle } from '@/libs/components/toggle';
+export { default as Tap } from '@/libs/components/tap/tapContainer';
 
 // hooks
 export { default as useClickAway } from '@/libs/hooks/useClickAway';
