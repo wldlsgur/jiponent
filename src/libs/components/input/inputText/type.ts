@@ -11,4 +11,5 @@ export type InputType = 'text' | 'email' | 'number' | 'password' | 'tel' | 'date
 export interface Props extends ComponentProps<'input'> {
   type?: InputType;
   invalid?: boolean;
+  borderColor?: string;
 }

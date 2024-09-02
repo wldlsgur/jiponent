@@ -35,7 +35,7 @@ const TapContainer = ({ children, defaultIndex, activeStyle, itemAttribute, ...r
   return (
     <div {...rest}>
       <div>{items}</div>
-      <div>{activeItem && activeItem.props.content}</div>
+      {activeItem && activeItem.props.content}
     </div>
   );
 };

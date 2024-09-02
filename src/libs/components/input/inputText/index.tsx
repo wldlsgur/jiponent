@@ -5,14 +5,14 @@ import combineClassName from '@/libs/utils/combineClassName';
 
 const InputText = forwardRef(
   (
-    { type = 'text', invalid = false, className, style, ...rest }: Props,
+    { type = 'text', invalid = false, borderColor = 'gray', className, style, ...rest }: Props,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     return (
       <input
         ref={ref}
         type={type}
-        style={{ borderColor: invalid ? 'red' : 'gray', ...style }}
+        style={{ ...style, borderColor: invalid ? 'red' : borderColor }}
         className={combineClassName(S.default.input, className)}
         {...rest}
       />
