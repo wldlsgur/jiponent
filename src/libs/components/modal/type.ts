@@ -4,4 +4,5 @@ export interface Props extends ComponentProps<'div'> {
   visible: boolean;
   children: ReactNode;
   onClose?: () => void;
+  portalTarget?: Element | DocumentFragment;
 }

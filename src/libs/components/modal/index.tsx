@@ -5,7 +5,14 @@ import { Props } from './type';
 import { useClickAway } from '@/libs';
 import combineClassName from '@/libs/utils/combineClassName';
 
-const Modal = ({ visible, children, onClose, className, ...rest }: Props) => {
+const Modal = ({
+  visible,
+  children,
+  onClose,
+  className,
+  portalTarget = document.body,
+  ...rest
+}: Props) => {
   const ref = useClickAway<HTMLDivElement>(() => onClose && onClose());
   useBodyScroll(visible);
   const backgroundClass = `${S.default.background} ${visible ? '' : S.default.hidden}`;
@@ -17,7 +24,7 @@ const Modal = ({ visible, children, onClose, className, ...rest }: Props) => {
     >
       <div ref={ref}>{children}</div>
     </div>,
-    document.body,
+    portalTarget,
   );
 };
 
